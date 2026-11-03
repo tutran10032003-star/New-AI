@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Ask Atlantic | Atlantic Coast Tours</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --deep: #0b5d73;
+    --sea: #19a7b8;
+    --foam: #bff3ee;
+    --sand: #fff3d6;
+    --wood: #8a5a2b;
+    --wood-dark: #5d3a17;
+    --gold: #ffc94d;
+    --coral: #ff6f61;
+    --ink: #0b3b4a;
+    --ink-soft: #3f6f7c;
+    --font: "Fredoka", "Nunito", "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: var(--font);
+    color: var(--ink);
+    background:
+      radial-gradient(ellipse at 50% -10%, #7be0d6 0%, transparent 55%),
+      linear-gradient(180deg, #19a7b8 0%, #0f7c93 55%, #0b5d73 100%);
+    display: flex; justify-content: center; align-items: center;
+    height: 100vh; height: 100dvh; overflow: hidden; position: relative;
+  }
+  /* Cute pirate sea pattern */
+  body::before {
+    content: ""; position: fixed; inset: 0; pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22260%22 height=%22260%22 viewBox=%220 0 260 260%22%3E%3Cg opacity=%220.55%22%3E%3Cg transform=%22translate%2840 40%29 rotate%28-10%29 scale%281.2%29%22%3E%3Cpath d=%22M-14 4Q-14-18 0-18Q14-18 14 4L14 8Q10 14 8 8Q6 16 2 10Q0 17-2 10Q-6 16-8 8Q-10 14-14 8Z%22 fill=%22%23c9a0ff%22 stroke=%22%23fff%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/%3E%3Ccircle cx=%22-5%22 cy=%22-5%22 r=%222.4%22 fill=%22%230b3b4a%22/%3E%3Ccircle cx=%225%22 cy=%22-5%22 r=%222.4%22 fill=%22%230b3b4a%22/%3E%3Cpath d=%22M-4 1Q0 4 4 1%22 fill=%22none%22 stroke=%22%230b3b4a%22 stroke-width=%221.8%22 stroke-linecap=%22round%22/%3E%3Cpath d=%22M-15-12H15L9-20Q0-24-9-20Z%22 fill=%22%231d2b3a%22 stroke=%22%23fff%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/%3E%3Ccircle cx=%220%22 cy=%22-15%22 r=%222%22 fill=%22%23fff%22/%3E%3C/g%3E%3Cg transform=%22translate%28150 30%29 rotate%2812%29 scale%281%29%22%3E%3Cpath d=%22M-16 0Q-4-14 10 0Q-4 14-16 0Z%22 fill=%22%23ffd166%22 stroke=%22%23fff%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/%3E%3Cpath d=%22M10 0L20-8V8Z%22 fill=%22%23ffd166%22 stroke=%22%23fff%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/%3E%3Ccircle cx=%22-8%22 cy=%22-2%22 r=%222%22 fill=%22%230b3b4a%22/%3E%3C/g%3E%3Cg transform=%22translate%28220 90%29 rotate%280%29 scale%281%29%22%3E%3Cg fill=%22none%22 stroke=%22%23fff%22 stroke-width=%222%22%3E%3Ccircle cx=%220%22 cy=%220%22 r=%225%22/%3E%3Ccircle cx=%229%22 cy=%22-10%22 r=%223%22/%3E%3Ccircle cx=%22-3%22 cy=%22-16%22 r=%222%22/%3E%3C/g%3E%3C/g%3E%3Cg transform=%22translate%2890 100%29 rotate%2820%29 scale%281%29%22%3E%3Cpath d=%22M0-18L5-6 18-5 8 4 11 17 0 10-11 17-8 4-18-5-5-6Z%22 fill=%22%23ff8a7a%22 stroke=%22%23fff%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/%3E%3Ccircle cx=%22-2%22 cy=%22-2%22 r=%221.6%22 fill=%22%23fff%22/%3E%3Ccircle cx=%223%22 cy=%222%22 r=%221.6%22 fill=%22%23fff%22/%3E%3C/g%3E%3Cg transform=%22translate%28200 170%29 rotate%28-8%29 scale%281.1%29%22%3E%3Crect x=%22-14%22 y=%22-2%22 width=%2228%22 height=%2216%22 rx=%223%22 fill=%22%23b8793e%22 stroke=%22%23fff%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/%3E%3Cpath d=%22M-14-2Q-14-14 0-14Q14-14 14-2Z%22 fill=%22%23d49a58%22 stroke=%22%23fff%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/%3E%3Crect x=%22-3%22 y=%221%22 width=%226%22 height=%227%22 rx=%221.5%22 fill=%22%23ffd166%22 stroke=%22%23fff%22 stroke-width=%221.6%22/%3E%3Ccircle cx=%22-6%22 cy=%22-8%22 r=%221.5%22 fill=%22%23ffd166%22/%3E%3Ccircle cx=%226%22 cy=%22-9%22 r=%221.5%22 fill=%22%23ffd166%22/%3E%3C/g%3E%3Cg transform=%22translate%2830 170%29 rotate%2810%29 scale%281%29%22%3E%3Cpath d=%22M-14 8Q-16-14 0-16Q16-14 14 8Z%22 fill=%22%23ffc8dd%22 stroke=%22%23fff%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/%3E%3Cpath d=%22M0-14V8M-7-11L-6 8M7-11L6 8%22 stroke=%22%23fff%22 stroke-width=%221.6%22 fill=%22none%22/%3E%3Crect x=%22-7%22 y=%228%22 width=%2214%22 height=%225%22 rx=%222%22 fill=%22%23ffc8dd%22 stroke=%22%23fff%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/%3E%3C/g%3E%3Cg transform=%22translate%28120 185%29 rotate%280%29 scale%281%29%22%3E%3Cpath d=%22M-16 6H16L11 14H-11Z%22 fill=%22%23b8793e%22 stroke=%22%23fff%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/%3E%3Cpath d=%22M0 6V-18%22 stroke=%22%23fff%22 stroke-width=%222.4%22/%3E%3Cpath d=%22M2-16Q14-10 12 2H2Z%22 fill=%22%23fff%22/%3E%3Cpath d=%22M-2-12Q-12-6-10 2H-2Z%22 fill=%22%23ffd166%22 stroke=%22%23fff%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/%3E%3Cpath d=%22M0-18L8-15L0-12Z%22 fill=%22%23ff5d5d%22/%3E%3C/g%3E%3Cg transform=%22translate%28250 230%29 rotate%2814%29 scale%280.9%29%22%3E%3Cg fill=%22none%22 stroke=%22%23fff%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%220%22 cy=%22-12%22 r=%224%22/%3E%3Cpath d=%22M0-8V14M-6-2H6M-14 4Q-12 14 0 14Q12 14 14 4%22/%3E%3C/g%3E%3C/g%3E%3Cg transform=%22translate%2860 235%29 rotate%280%29 scale%281%29%22%3E%3Cpath d=%22M-11 2Q-13-14 0-14Q13-14 11 2Q11 8 6 8V12H-6V8Q-11 8-11 2Z%22 fill=%22%23fff%22 stroke=%22%23fff%22 stroke-width=%222%22 stroke-linejoin=%22round%22/%3E%3Ccircle cx=%22-4.5%22 cy=%220%22 r=%223%22 fill=%22%230b3b4a%22/%3E%3Ccircle cx=%224.5%22 cy=%220%22 r=%223%22 fill=%22%230b3b4a%22/%3E%3Cpath d=%22M-15 16L15 22M15 16L-15 22%22 stroke=%22%23fff%22 stroke-width=%223%22 stroke-linecap=%22round%22/%3E%3C/g%3E%3Cg transform=%22translate%28170 125%29 rotate%280%29 scale%280.9%29%22%3E%3Cpath d=%22M-18 0Q-12-8-6 0T6 0T18 0%22 fill=%22none%22 stroke=%22%23fff%22 stroke-width=%222.4%22 stroke-linecap=%22round%22/%3E%3C/g%3E%3Cg transform=%22translate%2815 110%29 rotate%280%29 scale%280.9%29%22%3E%3Cpath d=%22M-18 0Q-12-8-6 0T6 0T18 0%22 fill=%22none%22 stroke=%22%23fff%22 stroke-width=%222.4%22 stroke-linecap=%22round%22/%3E%3C/g%3E%3Cg transform=%22translate%28235 20%29 rotate%280%29 scale%280.9%29%22%3E%3Cg fill=%22none%22 stroke=%22%23fff%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle r=%2210%22/%3E%3Ccircle r=%223%22/%3E%3Cpath d=%22M0-17V17M-17 0H17M-12-12L12 12M12-12L-12 12%22/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-size: 260px 260px;
+    animation: drift 60s linear infinite;
+  }
+  @keyframes drift { to { background-position: 260px 260px; } }
+
+  .app {
+    position: relative; z-index: 1; width: 100%; max-width: 680px; height: 100%;
+    background: var(--sand);
+    display: flex; flex-direction: column; overflow: hidden;
+    box-shadow: 0 10px 40px rgba(4, 40, 52, 0.45);
+  }
+  @media (min-width: 700px) {
+    .app { height: 90vh; border-radius: 28px; border: 6px solid var(--wood); box-shadow: 0 0 0 3px var(--wood-dark), 0 18px 50px rgba(4,40,52,.5); }
+  }
+
+  /* Top bar: wooden plank */
+  .topbar {
+    padding: calc(14px + env(safe-area-inset-top, 0px)) 18px 12px;
+    display: flex; align-items: center; gap: 12px;
+    background:
+      repeating-linear-gradient(90deg, rgba(0,0,0,0.06) 0 2px, transparent 2px 46px),
+      linear-gradient(180deg, #a56e36, var(--wood));
+    border-bottom: 4px solid var(--wood-dark);
+    color: #fff;
+  }
+  .logo { width: 44px; height: 44px; flex-shrink: 0; border-radius: 50%; background: #e9fbf8; border: 3px solid var(--gold); display: grid; place-items: center; box-shadow: 0 2px 0 var(--wood-dark); }
+  .logo svg { width: 34px; height: 34px; }
+  .brand { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+  .brand h1 { font-size: 1.25rem; font-weight: 600; letter-spacing: 0.02em; color: #fff; text-shadow: 0 2px 0 var(--wood-dark); }
+  .status { display: inline-flex; align-items: center; gap: 6px; font-size: 0.78rem; color: #ffeccb; }
+  .live { width: 9px; height: 9px; border-radius: 50%; background: #56e39f; box-shadow: 0 0 0 3px rgba(86,227,159,.3); animation: pulse 2.4s ease-in-out infinite; }
+  .live.off { background: #ffb347; box-shadow: 0 0 0 3px rgba(255,179,71,.3); animation: none; }
+  @keyframes pulse { 50% { opacity: 0.4; } }
+  .newchat {
+    background: var(--gold); border: 0; color: var(--wood-dark); font-family: var(--font); font-weight: 600;
+    font-size: 0.8rem; padding: 8px 14px; border-radius: 999px; cursor: pointer; box-shadow: 0 3px 0 #c9962a;
+    transition: transform .1s, box-shadow .1s;
+  }
+  .newchat:active { transform: translateY(2px); box-shadow: 0 1px 0 #c9962a; }
+
+  /* Stage with its own little sea-pattern */
+  .stage {
+    flex: 1; overflow-y: auto; padding: 22px 18px; scroll-behavior: smooth;
+    background:
+      linear-gradient(180deg, rgba(255,243,214,.55), rgba(255,243,214,.55)),
+      url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22260%22 height=%22260%22 viewBox=%220 0 260 260%22%3E%3Cg opacity=%220.28%22%3E%3Cg transform=%22translate%2840 40%29 rotate%28-10%29 scale%281.2%29%22%3E%3Cpath d=%22M-14 4Q-14-18 0-18Q14-18 14 4L14 8Q10 14 8 8Q6 16 2 10Q0 17-2 10Q-6 16-8 8Q-10 14-14 8Z%22 fill=%22%23c9a0ff%22 stroke=%22%2319a7b8%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/%3E%3Ccircle cx=%22-5%22 cy=%22-5%22 r=%222.4%22 fill=%22%230b3b4a%22/%3E%3Ccircle cx=%225%22 cy=%22-5%22 r=%222.4%22 fill=%22%230b3b4a%22/%3E%3Cpath d=%22M-4 1Q0 4 4 1%22 fill=%22none%22 stroke=%22%230b3b4a%22 stroke-width=%221.8%22 stroke-linecap=%22round%22/%3E%3Cpath d=%22M-15-12H15L9-20Q0-24-9-20Z%22 fill=%22%231d2b3a%22 stroke=%22%2319a7b8%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/%3E%3Ccircle cx=%220%22 cy=%22-15%22 r=%222%22 fill=%22%2319a7b8%22/%3E%3C/g%3E%3Cg transform=%22translate%28150 30%29 rotate%2812%29 scale%281%29%22%3E%3Cpath d=%22M-16 0Q-4-14 10 0Q-4 14-16 0Z%22 fill=%22%23ffd166%22 stroke=%22%2319a7b8%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/%3E%3Cpath d=%22M10 0L20-8V8Z%22 fill=%22%23ffd166%22 stroke=%22%2319a7b8%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/%3E%3Ccircle cx=%22-8%22 cy=%22-2%22 r=%222%22 fill=%22%230b3b4a%22/%3E%3C/g%3E%3Cg transform=%22translate%28220 90%29 rotate%280%29 scale%281%29%22%3E%3Cg fill=%22none%22 stroke=%22%2319a7b8%22 stroke-width=%222%22%3E%3Ccircle cx=%220%22 cy=%220%22 r=%225%22/%3E%3Ccircle cx=%229%22 cy=%22-10%22 r=%223%22/%3E%3Ccircle cx=%22-3%22 cy=%22-16%22 r=%222%22/%3E%3C/g%3E%3C/g%3E%3Cg transform=%22translate%2890 100%29 rotate%2820%29 scale%281%29%22%3E%3Cpath d=%22M0-18L5-6 18-5 8 4 11 17 0 10-11 17-8 4-18-5-5-6Z%22 fill=%22%23ff8a7a%22 stroke=%22%2319a7b8%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/%3E%3Ccircle cx=%22-2%22 cy=%22-2%22 r=%221.6%22 fill=%22%2319a7b8%22/%3E%3Ccircle cx=%223%22 cy=%222%22 r=%221.6%22 fill=%22%2319a7b8%22/%3E%3C/g%3E%3Cg transform=%22translate%28200 170%29 rotate%28-8%29 scale%281.1%29%22%3E%3Crect x=%22-14%22 y=%22-2%22 width=%2228%22 height=%2216%22 rx=%223%22 fill=%22%23b8793e%22 stroke=%22%2319a7b8%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/%3E%3Cpath d=%22M-14-2Q-14-14 0-14Q14-14 14-2Z%22 fill=%22%23d49a58%22 stroke=%22%2319a7b8%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/%3E%3Crect x=%22-3%22 y=%221%22 width=%226%22 height=%227%22 rx=%221.5%22 fill=%22%23ffd166%22 stroke=%22%2319a7b8%22 stroke-width=%221.6%22/%3E%3Ccircle cx=%22-6%22 cy=%22-8%22 r=%221.5%22 fill=%22%23ffd166%22/%3E%3Ccircle cx=%226%22 cy=%22-9%22 r=%221.5%22 fill=%22%23ffd166%22/%3E%3C/g%3E%3Cg transform=%22translate%2830 170%29 rotate%2810%29 scale%281%29%22%3E%3Cpath d=%22M-14 8Q-16-14 0-16Q16-14 14 8Z%22 fill=%22%23ffc8dd%22 stroke=%22%2319a7b8%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/%3E%3Cpath d=%22M0-14V8M-7-11L-6 8M7-11L6 8%22 stroke=%22%2319a7b8%22 stroke-width=%221.6%22 fill=%22none%22/%3E%3Crect x=%22-7%22 y=%228%22 width=%2214%22 height=%225%22 rx=%222%22 fill=%22%23ffc8dd%22 stroke=%22%2319a7b8%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/%3E%3C/g%3E%3Cg transform=%22translate%28120 185%29 rotate%280%29 scale%281%29%22%3E%3Cpath d=%22M-16 6H16L11 14H-11Z%22 fill=%22%23b8793e%22 stroke=%22%2319a7b8%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/%3E%3Cpath d=%22M0 6V-18%22 stroke=%22%2319a7b8%22 stroke-width=%222.4%22/%3E%3Cpath d=%22M2-16Q14-10 12 2H2Z%22 fill=%22%2319a7b8%22/%3E%3Cpath d=%22M-2-12Q-12-6-10 2H-2Z%22 fill=%22%23ffd166%22 stroke=%22%2319a7b8%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/%3E%3Cpath d=%22M0-18L8-15L0-12Z%22 fill=%22%23ff5d5d%22/%3E%3C/g%3E%3Cg transform=%22translate%28250 230%29 rotate%2814%29 scale%280.9%29%22%3E%3Cg fill=%22none%22 stroke=%22%2319a7b8%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%220%22 cy=%22-12%22 r=%224%22/%3E%3Cpath d=%22M0-8V14M-6-2H6M-14 4Q-12 14 0 14Q12 14 14 4%22/%3E%3C/g%3E%3C/g%3E%3Cg transform=%22translate%2860 235%29 rotate%280%29 scale%281%29%22%3E%3Cpath d=%22M-11 2Q-13-14 0-14Q13-14 11 2Q11 8 6 8V12H-6V8Q-11 8-11 2Z%22 fill=%22%2319a7b8%22 stroke=%22%2319a7b8%22 stroke-width=%222%22 stroke-linejoin=%22round%22/%3E%3Ccircle cx=%22-4.5%22 cy=%220%22 r=%223%22 fill=%22%230b3b4a%22/%3E%3Ccircle cx=%224.5%22 cy=%220%22 r=%223%22 fill=%22%230b3b4a%22/%3E%3Cpath d=%22M-15 16L15 22M15 16L-15 22%22 stroke=%22%2319a7b8%22 stroke-width=%223%22 stroke-linecap=%22round%22/%3E%3C/g%3E%3Cg transform=%22translate%28170 125%29 rotate%280%29 scale%280.9%29%22%3E%3Cpath d=%22M-18 0Q-12-8-6 0T6 0T18 0%22 fill=%22none%22 stroke=%22%2319a7b8%22 stroke-width=%222.4%22 stroke-linecap=%22round%22/%3E%3C/g%3E%3Cg transform=%22translate%2815 110%29 rotate%280%29 scale%280.9%29%22%3E%3Cpath d=%22M-18 0Q-12-8-6 0T6 0T18 0%22 fill=%22none%22 stroke=%22%2319a7b8%22 stroke-width=%222.4%22 stroke-linecap=%22round%22/%3E%3C/g%3E%3Cg transform=%22translate%28235 20%29 rotate%280%29 scale%280.9%29%22%3E%3Cg fill=%22none%22 stroke=%22%2319a7b8%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle r=%2210%22/%3E%3Ccircle r=%223%22/%3E%3Cpath d=%22M0-17V17M-17 0H17M-12-12L12 12M12-12L-12 12%22/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-size: auto, 260px 260px;
+  }
+
+  .hello { padding-top: 2vh; text-align: center; animation: rise .6s ease-out; }
+  .hello .big { width: 96px; height: 96px; margin: 0 auto 10px; border-radius: 50%; background: #e0faf6; border: 4px solid var(--sea); display: grid; place-items: center; animation: bob 3.5s ease-in-out infinite; }
+  .hello .big svg { width: 76px; height: 76px; }
+  @keyframes bob { 50% { transform: translateY(-6px) rotate(-3deg); } }
+  .hello .ahoy { display: inline-block; background: var(--coral); color: #fff; font-weight: 600; padding: 4px 14px; border-radius: 999px; font-size: 0.85rem; letter-spacing: .04em; }
+  .hello h2 { margin-top: 10px; font-size: clamp(1.5rem, 6vw, 2.1rem); font-weight: 600; line-height: 1.15; color: var(--deep); }
+  .hello h2 em { font-style: normal; color: var(--coral); }
+  .hello p { margin: 10px auto 0; max-width: 30rem; font-size: 0.95rem; color: var(--ink-soft); line-height: 1.5; }
+  .cards { margin: 22px auto 0; max-width: 34rem; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .card {
+    text-align: left; font-family: var(--font); color: var(--ink); cursor: pointer;
+    background: #fff; border: 3px solid var(--sea); border-radius: 18px; padding: 12px 14px;
+    box-shadow: 0 4px 0 var(--sea); transition: transform .12s, box-shadow .12s;
+  }
+  .card:nth-child(2) { border-color: var(--coral); box-shadow: 0 4px 0 var(--coral); }
+  .card:nth-child(3) { border-color: var(--gold); box-shadow: 0 4px 0 #d6a52a; }
+  .card:nth-child(4) { border-color: #a77bff; box-shadow: 0 4px 0 #a77bff; }
+  .card .em { font-size: 1.6rem; display: block; }
+  .card b { display: block; font-weight: 600; font-size: 1rem; margin-top: 2px; }
+  .card span.s { display: block; margin-top: 2px; font-size: 0.82rem; color: var(--ink-soft); line-height: 1.35; }
+  .card:hover { transform: translateY(-2px); }
+  .card:active { transform: translateY(3px); box-shadow: 0 1px 0 rgba(0,0,0,.2); }
+  @media (max-width: 560px) { .cards { grid-template-columns: 1fr; } }
+
+  /* Messages */
+  .messages { display: flex; flex-direction: column; gap: 16px; }
+  .message { display: flex; gap: 10px; animation: rise .45s ease-out; }
+  @keyframes rise { from { opacity: 0; transform: translateY(10px) scale(.97); } to { opacity: 1; transform: none; } }
+  .message.user { justify-content: flex-end; }
+
+  .bubble { padding: 11px 16px; font-size: 0.98rem; line-height: 1.55; word-break: break-word; }
+  .message.user .bubble {
+    max-width: 82%; white-space: pre-wrap;
+    background: linear-gradient(180deg, #ff8577, var(--coral)); color: #fff; font-weight: 500;
+    border-radius: 20px 20px 4px 20px; box-shadow: 0 3px 0 #d9493c;
+  }
+  .message.bot .bubble {
+    background: #fff; color: var(--ink); border: 3px solid var(--sea);
+    border-radius: 20px 20px 20px 4px; box-shadow: 0 3px 0 var(--sea);
+  }
+  .message.error .bubble { background: #fff0ee; color: #a3281d; border-color: var(--coral); box-shadow: 0 3px 0 var(--coral); }
+
+  .mini { width: 38px; height: 38px; flex-shrink: 0; margin-top: 2px; border-radius: 50%; background: #e0faf6; border: 3px solid var(--sea); display: grid; place-items: center; }
+  .mini svg { width: 28px; height: 28px; }
+  .botbody { flex: 1; min-width: 0; max-width: 90%; }
+  .bubble strong { color: var(--deep); font-weight: 600; background: linear-gradient(180deg, transparent 60%, #ffe39a 60%); }
+  .bubble ul { margin: 6px 0 4px 1.15rem; }
+  .bubble li { margin-bottom: 4px; }
+  .retry { margin-top: 10px; background: var(--coral); border: 0; color: #fff; font-family: var(--font); font-weight: 600; padding: 7px 16px; border-radius: 999px; cursor: pointer; box-shadow: 0 3px 0 #d9493c; }
+  .retry:active { transform: translateY(2px); box-shadow: 0 1px 0 #d9493c; }
+  .timestamp { font-size: 0.74rem; color: var(--ink-soft); margin: 6px 0 0 6px; }
+
+  .thinking { display: inline-flex; align-items: center; gap: 8px; color: var(--ink-soft); }
+  .dot { width: 8px; height: 8px; background: var(--sea); border-radius: 50%; animation: bounce 1.4s infinite ease-in-out both; }
+  .dot:nth-child(1) { animation-delay: -0.32s; } .dot:nth-child(2) { animation-delay: -0.16s; }
+  @keyframes bounce { 0%,80%,100% { transform: translateY(0) scale(.6); opacity: 0.4; } 40% { transform: translateY(-5px) scale(1); opacity: 1; } }
+
+  /* Composer */
+  .composer { padding: 10px 16px 4px; background: var(--sand); border-top: 3px dashed rgba(25,167,184,.35); }
+  .pill {
+    display: flex; align-items: flex-end; gap: 8px; padding: 6px 6px 6px 18px;
+    background: #fff; border: 3px solid var(--sea); border-radius: 28px;
+    transition: box-shadow .2s, border-color .2s;
+  }
+  .pill:focus-within { border-color: var(--coral); box-shadow: 0 0 0 4px rgba(255,111,97,.2); }
+  .pill textarea {
+    flex: 1; min-width: 0; resize: none; border: 0; outline: none; background: transparent;
+    font-family: var(--font); font-size: 1rem; line-height: 1.4; color: var(--ink);
+    padding: 9px 0; max-height: 120px; overflow-y: auto;
+  }
+  .pill textarea::placeholder { color: #8fb3ba; }
+  .pill textarea:disabled { opacity: 0.6; }
+  #sendBtn {
+    height: 42px; min-width: 42px; padding: 0 16px; flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    background: var(--coral); color: #fff; border: 0; border-radius: 999px; cursor: pointer;
+    font-family: var(--font); font-weight: 600; font-size: 0.92rem; box-shadow: 0 3px 0 #d9493c;
+    transition: transform .1s, box-shadow .1s, opacity .2s;
+  }
+  #sendBtn:active:not(:disabled) { transform: translateY(2px); box-shadow: 0 1px 0 #d9493c; }
+  #sendBtn:disabled { opacity: 0.45; cursor: not-allowed; }
+  #sendBtn svg { width: 16px; height: 16px; fill: currentColor; }
+  .disclaimer { padding: 6px 18px calc(12px + env(safe-area-inset-bottom, 0px)); font-size: 0.72rem; color: var(--ink-soft); text-align: center; line-height: 1.5; background: var(--sand); }
+  .disclaimer a { color: var(--deep); font-weight: 500; text-underline-offset: 3px; }
+
+  :focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+  @media (prefers-reduced-motion: reduce) {
+    body::before, .hello, .hello .big, .message, .dot, .live { animation: none; }
+    .stage { scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="app">
+    <header class="topbar">
+      <div class="logo" aria-hidden="true"></div>
+      <div class="brand">
+        <h1>Ask Atlantic</h1>
+        <span class="status"><span class="live off" id="liveDot" aria-hidden="true"></span><span id="statusText">Connecting…</span></span>
+      </div>
+      <button class="newchat" id="newChat" type="button" title="Start a new conversation">New chat</button>
+    </header>
+
+    <div class="stage" id="stage" aria-live="polite">
+      <section class="hello" id="hello">
+        <div class="big" aria-hidden="true"></div>
+        <span class="ahoy">Ahoy, traveller!</span>
+        <h2>Where on the <em>Wild Atlantic Way</em>?</h2>
+        <p>Ask about any tour in Clare, Galway or Mayo: prices, places left this week and special offers, straight from our live schedule.</p>
+        <div class="cards" id="cards"></div>
+      </section>
+      <div class="messages" id="messages"></div>
+    </div>
+
+    <div class="composer">
+      <div class="pill">
+        <textarea id="userInput" rows="1" placeholder="Ask about our tours..." aria-label="Your question"></textarea>
+        <button id="sendBtn" type="button" title="Send message" aria-label="Send message">
+          Send
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path></svg>
+        </button>
+      </div>
+    </div>
+    <p class="disclaimer">Ask Atlantic is an AI assistant. Atlantic Coast Tours is fictitious, built for a BDAIB class demo. Data: <a href="https://docs.google.com/spreadsheets/d/1balBGf8QhZ5dc-RCCAPt2kcrcf6m_YRh0HL_r8bBtJw/edit?usp=sharing" target="_blank" rel="noopener">live Google Sheet</a>.</p>
+  </div>
+
+  <script>
+    const CSV_URL = "https://docs.google.com/spreadsheets/d/1balBGf8QhZ5dc-RCCAPt2kcrcf6m_YRh0HL_r8bBtJw/export?format=csv";
+    const CHAT_API = "https://luas-class.kluxy.app/chat";
+    const SYSTEM_PROMPT = "You are Ask Atlantic, the customer assistant for Atlantic Coast Tours. Answer only from the live data you are given. Quote exact prices in euro and slots left. If something is not in the data, say so. If a value looks implausible, say so and suggest the customer checks with staff. Be warm and brief.";
+
+    const STARTERS = [
+      { e: "🛶", t: "Kayak trips",     s: "Which have places this week?", q: "Which kayak trips have places left this week?" },
+      { e: "🦀", t: "Family days out", s: "Tours under €50",               q: "Which tours cost under €50?" },
+      { e: "🪙", t: "Special offers",  s: "What deals are on?",            q: "What special offers are on right now?" },
+      { e: "🍤", t: "Food tours",      s: "Which ones are in Galway?",     q: "Which food tours are in Galway, and what do they cost?" }
+    ];
+
+    const MASCOT = '<svg viewBox="-24 -28 48 48" aria-hidden="true"><path d="M-14 4Q-14-18 0-18Q14-18 14 4L14 8Q10 14 8 8Q6 16 2 10Q0 17-2 10Q-6 16-8 8Q-10 14-14 8Z" fill="#c9a0ff" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="-5" cy="-5" r="2.4" fill="#0b3b4a"/><circle cx="5" cy="-5" r="2.4" fill="#0b3b4a"/><path d="M-4 1Q0 4 4 1" fill="none" stroke="#0b3b4a" stroke-width="1.8" stroke-linecap="round"/><path d="M-15-12H15L9-20Q0-24-9-20Z" fill="#1d2b3a" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="0" cy="-15" r="2" fill="#fff"/></svg>';
+
+    const stage = document.getElementById('stage');
+    const hello = document.getElementById('hello');
+    const messages = document.getElementById('messages');
+    const input = document.getElementById('userInput');
+    const sendBtn = document.getElementById('sendBtn');
+    const liveDot = document.getElementById('liveDot');
+    const statusText = document.getElementById('statusText');
+    let busy = false;
+
+    document.querySelector('.logo').innerHTML = MASCOT;
+    document.querySelector('.hello .big').innerHTML = MASCOT;
+
+    /* ---------- CSV: count tours for the "Live" badge ---------- */
+    function parseCSV(t) {
+      const rows = []; let row = [], cell = '', q = false;
+      for (let i = 0; i < t.length; i++) {
+        const c = t[i];
+        if (q) {
+          if (c === '"') { if (t[i + 1] === '"') { cell += '"'; i++; } else q = false; }
+          else cell += c;
+        } else if (c === '"') q = true;
+        else if (c === ',') { row.push(cell); cell = ''; }
+        else if (c === '\n') { row.push(cell); rows.push(row); row = []; cell = ''; }
+        else if (c !== '\r') cell += c;
+      }
+      if (cell !== '' || row.length) { row.push(cell); rows.push(row); }
+      return rows;
+    }
+    function setStatus(csv) {
+      const n = Math.max(0, parseCSV(csv).filter(r => (r[0] || '').trim() !== '').length - 1);
+      liveDot.classList.remove('off');
+      statusText.textContent = 'Live · ' + n + ' tours · ' + new Date().toTimeString().slice(0, 5);
+    }
+    function setOffline() { liveDot.classList.add('off'); statusText.textContent = 'Offline'; }
+    async function loadCount() {
+      try {
+        const r = await fetch(CSV_URL, { cache: 'no-store' });
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        setStatus(await r.text());
+      } catch (e) { setOffline(); }
+    }
+
+    /* ---------- Safe rich text: escape, then **bold**, bullets, line breaks ---------- */
+    function escapeHtml(s) { return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
+    function formatText(text) {
+      const lines = escapeHtml(text).split('\n');
+      let html = '', inList = false;
+      lines.forEach(function (line) {
+        const m = line.match(/^\s*[-*•]\s+(.*)$/);
+        if (m) { if (!inList) { html += '<ul>'; inList = true; } html += '<li>' + m[1] + '</li>'; }
+        else { if (inList) { html += '</ul>'; inList = false; } html += line.trim() === '' ? '<br>' : line + '<br>'; }
+      });
+      if (inList) html += '</ul>';
+      return html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>').replace(/(<br>)+$/, '');
+    }
+
+    /* ---------- Rendering ---------- */
+    function scrollDown() { stage.scrollTop = stage.scrollHeight; }
+
+    function addUser(text) {
+      const d = document.createElement('div');
+      d.className = 'message user';
+      const b = document.createElement('div');
+      b.className = 'bubble'; b.textContent = text;
+      d.appendChild(b); messages.appendChild(d); scrollDown();
+    }
+
+    function addBot(text, opts) {
+      opts = opts || {};
+      const d = document.createElement('div');
+      d.className = 'message bot' + (opts.isError ? ' error' : '');
+      const av = document.createElement('div'); av.className = 'mini'; av.innerHTML = MASCOT;
+      const body = document.createElement('div'); body.className = 'botbody';
+      const bubble = document.createElement('div'); bubble.className = 'bubble';
+      if (opts.isError) bubble.textContent = text; else bubble.innerHTML = formatText(text);
+      if (opts.retryQuestion) {
+        const btn = document.createElement('button');
+        btn.className = 'retry'; btn.type = 'button'; btn.textContent = 'Try again';
+        btn.addEventListener('click', function () { d.remove(); send(opts.retryQuestion, true); });
+        bubble.appendChild(document.createElement('br'));
+        bubble.appendChild(btn);
+      }
+      body.appendChild(bubble);
+      if (opts.timestamp) {
+        const t = document.createElement('div'); t.className = 'timestamp';
+        t.textContent = 'Data fetched live at ' + opts.timestamp;
+        body.appendChild(t);
+      }
+      d.appendChild(av); d.appendChild(body); messages.appendChild(d); scrollDown();
+    }
+
+    function showThinking() {
+      const d = document.createElement('div');
+      d.className = 'message bot'; d.id = 'thinkingBubble';
+      d.innerHTML = '<div class="mini">' + MASCOT + '</div><div class="botbody"><div class="bubble"><span class="thinking"><span class="dot"></span><span class="dot"></span><span class="dot"></span>Thinking...</span></div></div>';
+      messages.appendChild(d); scrollDown();
+    }
+    function hideThinking() { const t = document.getElementById('thinkingBubble'); if (t) t.remove(); }
+
+    function setBusy(state) {
+      busy = state; sendBtn.disabled = state; input.disabled = state;
+      if (!state) input.focus();
+    }
+    function autosize() {
+      input.style.height = 'auto';
+      input.style.height = Math.min(input.scrollHeight, 120) + 'px';
+    }
+
+    /* ---------- Send: 1) fetch the live Sheet  2) send question + CSV to the class brain ---------- */
+    async function send(question, isRetry) {
+      if (busy) return;
+      question = question.trim();
+      if (!question) return;
+
+      hello.style.display = 'none';
+      if (!isRetry) addUser(question);
+      input.value = ''; autosize();
+      setBusy(true); showThinking();
+
+      try {
+        const csvResponse = await fetch(CSV_URL, { cache: 'no-store' });
+        if (!csvResponse.ok) throw new Error('Failed to fetch live catalogue (HTTP ' + csvResponse.status + ')');
+        const csv = await csvResponse.text();
+        setStatus(csv);
+        const timeString = new Date().toTimeString().split(' ')[0];
+
+        const chatResponse = await fetch(CHAT_API, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            system: SYSTEM_PROMPT,
+            messages: [{ role: 'user', content: 'Live data (CSV):\n' + csv + '\n\nCustomer question: ' + question }]
+          })
+        });
+        if (!chatResponse.ok) throw new Error('Brain service error (HTTP ' + chatResponse.status + ')');
+
+        const data = await chatResponse.json();
+        hideThinking();
+        if (data && data.reply) addBot(data.reply, { timestamp: timeString });
+        else throw new Error('Invalid response format received from assistant.');
+      } catch (error) {
+        hideThinking();
+        addBot('Error: ' + error.message, { isError: true, retryQuestion: question });
+      } finally {
+        setBusy(false);
+      }
+    }
+
+    function newChat() {
+      if (busy) return;
+      messages.innerHTML = '';
+      hello.style.display = '';
+      input.value = ''; autosize();
+      stage.scrollTop = 0; input.focus();
+    }
+
+    /* ---------- Wire up ---------- */
+    STARTERS.forEach(function (s) {
+      const b = document.createElement('button');
+      b.className = 'card'; b.type = 'button';
+      b.innerHTML = '<span class="em">' + s.e + '</span><b>' + s.t + '</b><span class="s">' + s.s + '</span>';
+      b.addEventListener('click', function () { send(s.q); });
+      document.getElementById('cards').appendChild(b);
+    });
+
+    sendBtn.addEventListener('click', function () { send(input.value); });
+    input.addEventListener('input', autosize);
+    input.addEventListener('keydown', function (e) {
+      /* Enter sends, Shift+Enter adds a new line; ignore Enter while composing with an IME */
+      if (e.key === 'Enter' && !e.shiftKey && !e.isComposing) {
+        e.preventDefault();
+        send(input.value);
+      }
+    });
+    document.getElementById('newChat').addEventListener('click', newChat);
+    window.addEventListener('load', function () { loadCount(); input.focus(); });
+  </script>
+</body>
+</html>
